@@ -50,7 +50,7 @@ export default function RegisterPage() {
       localStorage.setItem("token", data.access_token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      router.push("/dashboard");
+      window.location.href = "/dashboard";
     } catch (err: any) {
       setError(err.message || "Something went wrong. Please check your network.");
     } finally {
